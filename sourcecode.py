@@ -22,11 +22,6 @@ S=k.replace(",","\n")
 h=S.replace("     ","")
 p=S.replace(")","\n")
 
-
-
-
-
-
 class SampleApp(tk.Tk):
 
     def __init__(self, *args, **kwargs):
@@ -54,14 +49,7 @@ class SampleApp(tk.Tk):
         '''Show a frame for the given page name'''
         frame = self.frames[page_name]
         frame.tkraise()
-     
-           
-   
-
     
-        
-
-
 class StartPage(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -92,10 +80,6 @@ class StartPage(tk.Frame):
         self.btn5=Button(self,image=self.controller.b5,bd = 0,bg='#2F9599',activebackground='#2F9599').place()
         self.controller.o=PhotoImage(file="C:\\Users\\krishna\\OneDrive\\Pictures\\ipl score board\\quit.png")
         self.bt9=Button(self,image=self.controller.o,bd = 0,bg='#2F9599',activebackground='#2F9599',command=self.controller.destroy).place(x=295,y=310) 
-        
-       
-
-
 class LiveScore(tk.Frame):
     
     def __init__(self, parent, controller):
@@ -106,24 +90,11 @@ class LiveScore(tk.Frame):
                                foreground='white',
                                background='#2F9599')
         headingLabel1.pack()
-
-
-        
-       # T=Text(self).place(x=100,y=200,height=100,width=400)
-        #self.b1 = Button(self, text="DISPLAY SCORE", bg="blue", fg="white", command=lambda: controller.score).place(x=120, y=450, height=80, width=250)
-        #self.b2 = Button(self, text="CLEAR SCORE", bg="blue", fg="white", command=lambda: controller.clear).place(x=420, y=450, height=80, width=250)
-    
-
         frame = LabelFrame(self,bg="white",borderwidth=0,relief=SUNKEN,height="100",width="500",text=p,font=('verdana',15,'bold'),padx=100,pady=100).place(x=100,y=100)
         self.controller.b6=PhotoImage(file="C:\\Users\\krishna\\OneDrive\\Pictures\\ipl score board\\btn6.png")
         self.btn6=Button(self,image=self.controller.b6,bd = 0,bg='#2F9599',activebackground='#2F9599',command=lambda: controller.show_frame("StartPage")).place(x=400,y=400)
         self.controller.u=PhotoImage(file="C:\\Users\\krishna\\OneDrive\\Pictures\\ipl score board\\quit.png")
         self.bt0=Button(self,image=self.controller.u,bd = 0,bg='#2F9599',activebackground='#2F9599',command=self.controller.destroy).place(x=100,y=400) 
-
-        
-
-	
-      
 class PageTwo(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -172,8 +143,6 @@ class PageThree(tk.Frame):
         self.bt7=Button(self,image=self.controller.h,bd = 0,bg='#582eb3',activebackground='#582eb3',command=lambda: controller.show_frame("StartPage")).place(x=600,y=450)
         self.controller.z=PhotoImage(file="C:\\Users\\krishna\\OneDrive\\Pictures\\ipl score board\\quit.png")
         self.bt8=Button(self,image=self.controller.z,bd = 0,bg='#582eb3',activebackground='#582eb3',command=self.controller.destroy).place(x=200,y=450) 
-        
-
                 
 class Login(tk.Frame):
 
@@ -191,8 +160,6 @@ class Login(tk.Frame):
         self.e2=Entry(self, show="*").place(x=300,y=210)
         self.controller.q=PhotoImage(file="C:\\Users\\krishna\\OneDrive\\Pictures\\ipl score board\\btn4.png")
         self.c=Button(self,image=self.controller.q,bd = 0,bg='#582eb3',activebackground='#582eb3',command=lambda: controller.show_frame("LiveScore")).place(x=285,y=255)
-
-      
 
 
 if __name__ == "__main__":
